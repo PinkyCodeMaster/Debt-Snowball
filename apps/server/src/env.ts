@@ -1,4 +1,3 @@
-/* eslint-disable node/no-process-env */
 import { expand } from "dotenv-expand";
 import { config } from "dotenv";
 import path from "node:path";
@@ -16,6 +15,8 @@ const EnvSchema = z.object({
     PORT: z.coerce.number().default(9999),
     LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"]),
     DATABASE_URL: z.url(),
+    BETTER_AUTH_URL: z.url(),
+    BETTER_AUTH_SECRET: z.string().min(32),
 });
 
 export type env = z.infer<typeof EnvSchema>;

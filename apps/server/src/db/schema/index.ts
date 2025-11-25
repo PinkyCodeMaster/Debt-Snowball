@@ -1,1 +1,1 @@
-export { usersTable } from "./user";
+export { account, accountRelations, session, sessionRelations, user, userRelations, verification } from "./user";
