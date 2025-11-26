@@ -1,9 +1,11 @@
 {
   "name": "server",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "db:push": "drizzle-kit generate && drizzle-kit push"
   },
   "dependencies": {
+    "@better-auth/expo": "^1.4.1",
     "@hono/zod-openapi": "^1.1.5",
     "@neondatabase/serverless": "^1.0.2",
     "@scalar/hono-api-reference": "^0.9.25",

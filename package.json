@@ -22,11 +22,7 @@
     "check-types": "turbo check-types",
     "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev",
-    "dev:server": "turbo -F server dev",
-    "db:push": "turbo -F @debt-snowball/server db:push",
-    "db:studio": "turbo -F @debt-snowball/server db:studio",
-    "db:generate": "turbo -F @debt-snowball/server db:generate",
-    "db:migrate": "turbo -F @debt-snowball/server db:migrate"
+    "dev:server": "turbo -F server dev"
   },
   "dependencies": {
     "dotenv": "^17.2.2",

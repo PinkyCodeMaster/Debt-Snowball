@@ -18,10 +18,11 @@ export default function createApp() {
     // Apply CORS only if not in production
     if (process.env.NODE_ENV !== 'production') {
         app.use('*', cors({
-            origin: '*',           // allow all origins
-            allowMethods: ['GET', 'POST', 'OPTIONS'], // allowed HTTP methods
-            allowHeaders: ['Content-Type', 'Authorization'], // allowed headers
-        }))
+            origin: ['http://localhost:3000', 'http://localhost:9000'], // no '*'
+            allowMethods: ['GET', 'POST', 'OPTIONS'],
+            allowHeaders: ['Content-Type', 'Authorization'],
+            credentials: true,
+        }));
     }
     app.use(requestId())
         .use(pinoLogger());
